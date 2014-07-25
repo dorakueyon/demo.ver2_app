@@ -1,0 +1,1 @@
+DemoVer2App::Application.config.secret_key_base = 'blabla' # replace this

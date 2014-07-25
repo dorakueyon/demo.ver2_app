@@ -1,0 +1,29 @@
+<h1>Listing miroposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @miroposts.each do |miropost| %>
+      <tr>
+        <td><%= miropost.content %></td>
+        <td><%= miropost.user_id %></td>
+        <td><%= link_to 'Show', miropost %></td>
+        <td><%= link_to 'Edit', edit_miropost_path(miropost) %></td>
+        <td><%= link_to 'Destroy', miropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Miropost', new_miropost_path %>
